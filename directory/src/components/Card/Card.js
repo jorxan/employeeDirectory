@@ -3,24 +3,18 @@ import './style.css';
 
 function Card(props) {
 	return (
-		<div className="card">
-			<div className="img-container">
-				<img alt={props.name} src={props.image} />
+		<div className="text-center">
+			<div className="card" style={{ width: '18rem' }}>
+				<img src={props.image} className="card-img-top" alt={props.name} />
+				<div className="card-body">
+					<h5 className="card-title">{props.name}</h5>
+					<p className="card-text">{props.occupation}</p>
+					<a href="#" className="btn btn-primary">
+						Go somewhere
+					</a>
+				</div>
+				<span className="remove">𝘅</span>
 			</div>
-			<div className="content">
-				<ul>
-					<li>
-						<strong>Name:</strong> {props.name}
-					</li>
-					<li>
-						<strong>Occupation:</strong> {props.occupation}
-					</li>
-					<li>
-						<strong>Address:</strong> {props.location}
-					</li>
-				</ul>
-			</div>
-			<span className="remove">𝘅</span>
 		</div>
 	);
 }
